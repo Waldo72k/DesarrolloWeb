@@ -1,0 +1,107 @@
+/* Desarrollo Web 1 */
+/* Nombre Práctica: Hola Mundo */
+/* Autor/a: Cisneros Torres Alberto Oswaldo*/
+/* Fecha de elaboración: 02/06/23*/
+
+.mx {
+    color:  #1A94CB;
+    font-size: 200px;
+    -webkit-text-stroke: 4px #FFFFFF;
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+    left: 455px;
+}
+
+.us {
+    color: #D7C757;
+    font-size: 100px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    z-index: 1;
+    position: absolute;
+    top: 195px;
+    left: 205px;
+}
+
+.jp {
+    color: #E348C1;
+    font-size: 60px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    z-index: 2;
+    position: absolute;
+    top: 190px;
+    left: 700px;
+}
+
+.it {
+    color: #1DEBA2;
+    font-size: 100px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    position: absolute;
+    top: 70px;
+    left: 885px;
+}
+
+.hw {
+    color: #ED8D14;
+    font-size: 200px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    position: absolute;
+    top: 225px;
+    left: 100px;
+}
+
+.ru {
+    color: #3e77d3;
+    font-size: 90px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    position: absolute;
+    top: 105px;
+    left: 200px;
+}
+
+.ko {
+    color: #EBA5C0;
+    font-size: 50px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    position: absolute;
+    top: 40px;
+    left: 680px;
+}
+
+.po {
+    color: #7D6EE2;
+    font-size: 150px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    z-index: 4;
+    position: absolute;
+    top: 215px;
+    left: 110px;
+}
+
+.hi {
+    color: #2EC3E2;
+    font-size: 90px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    position: absolute;
+    top: 50px;
+    left: 450px;
+}
+
+.he {
+    color: #11EC62;
+    font-size: 90px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    position: absolute;
+    top: 465px;
+    left: 470px;
+}
+
+.sw {
+    color: #56EC3D;
+    font-size: 90px;
+    -webkit-text-stroke: 1px #FFFFFF;
+    position: absolute;
+    top: 400px;
+    left: 710px;
+}
