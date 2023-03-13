@@ -1,0 +1,28 @@
+html, body {
+    background-color: #a8dadc;
+    color: #1d3557;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-size: 62.5%; */
+    font-size: 1.3rem;
+}
+
+button{
+    padding: 15px;
+    font-size: 1.3rem;
+}
+
+.contenedor {
+    background-color: #457b9d;
+    padding-top: 1px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+}
+
+.contenedor--titulo{
+    font-size: 50px;
+    background-color: #a8dadc;
+    color: #e63946;
+        border-radius: 20px;
+        margin: 20px;   
+}
