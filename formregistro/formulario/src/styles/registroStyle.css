@@ -1,0 +1,28 @@
+.containerRegistro {
+    background-color: #0077B6;
+    color:aliceblue;
+    float: right;
+    margin-right: 180px;
+    padding: 90px 100px 100px 100px;
+    border-radius: 20px;
+}
+
+input{
+    width: 500px;
+}
+
+input[type="button"]{
+    width: 100px;
+}
+
+input[type="radio"]{
+    width: 20px;
+}
+
+.sexo{
+    font-size: 1.3rem;
+}
+h1{
+    font-size: 3rem;
+    color: aliceblue;
+}

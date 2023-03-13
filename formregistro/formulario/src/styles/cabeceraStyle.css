@@ -1,0 +1,11 @@
+.cabeceraContainer{
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #023E8A;
+}
+
+.cabeceraContainer_titulo{
+    font-size: 4rem;
+    color: aliceblue;
+}
