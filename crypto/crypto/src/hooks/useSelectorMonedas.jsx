@@ -5,6 +5,9 @@ export const useSelectorMonedas = (label, divisas) => {
 
     const Label = styled.label`
     color: aliceblue;
+    font-size: 1.2rem;
+    font-family: 'Sono', sans-serif;
+    font-weight: bold;
     `
 const DropMenu = styled.select`
 background-color: blueviolet;
@@ -12,6 +15,8 @@ color: aliceblue;
 border: none;
 width: 100%;
 text-transform: uppercase;
+font-family: 'Sono', sans-serif;
+font-weight: bold;
 border-radius: 12px;
 padding: 10px;
 margin: 10px 0 10px 0;
@@ -33,7 +38,7 @@ const SelectorMonedas = () =>
     onChange={e => setState(e.target.value)
     }>
     <option >Seleccione una divisa</option>
-    {divisas?.map(opcion => (
+    {divisas.map(opcion => (
         <option
         key={opcion.id}
         value={opcion.id}

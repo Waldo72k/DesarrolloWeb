@@ -11,7 +11,7 @@ function App() {
   margin-top: 80px;
   margin-bottom: 50px;
   text-align: center;
-  font-size: 70px;
+  font-size: 5rem;
   &::after{
     content: '';
     width: 200px;
