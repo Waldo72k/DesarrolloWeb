@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import Error from './Error'
 import useSelectorMonedas from '../hooks/useSelectorMonedas'
 import {monedas} from '../data/monedas.js'
+import Display from './Display'
 
 const InputSubmit = styled.input`
     background-color: #800080;
@@ -147,7 +148,7 @@ const Formulario = () => {
     setDatosReales({
       precioAhora: objetoData.PRICE,
       precioBajo: objetoData.LOWDAY,
-      precioInicio: objetoData.OPENDAY,
+      precioAlta: objetoData.HIGHDAY,
       imagen: objetoData.IMAGEURL,
     });
     console.log(objetoData);
@@ -159,7 +160,7 @@ const Formulario = () => {
     // console.log(segundaPosicion.nombre);
   }
 
-  const laURL = `https://cryptocompare.com${datosReales.imagen}`;
+  
 
   return (
     <>
@@ -174,15 +175,7 @@ const Formulario = () => {
 
         </form>
     </div>
-    {validacion && 
-      <CuadroCrypto>
-      <Imagen src={laURL} alt="Imagen de Crypto" />
-      <div>
-      <ContenidoCrypto2><ContenidoCrypto>Valor:</ContenidoCrypto>{datosReales.precioAhora}</ContenidoCrypto2>
-      <ContenidoCrypto2><ContenidoCrypto>Baja: </ContenidoCrypto>{datosReales.precioBajo}</ContenidoCrypto2>
-      
-      </div>
-      </CuadroCrypto>}
+    {validacion && <Display datos={datosReales}/>}
     
     </>
   )
