@@ -28,6 +28,7 @@ transition: background-color .3s ease;
 }
 `;
     /////Todo////
+    
 
     const [state,setState] = useState('');
   
@@ -42,9 +43,10 @@ const SelectorMonedas = () =>
         <option
         key={opcion.id}
         value={opcion.id}
-        >{opcion.nombre}</option>
+        >{opcion.nombre}</option>  
     ))}
     </DropMenu>
+    
     </>
 
 

@@ -10,7 +10,8 @@ text-transform: uppercase;
 font-family: 'Sono', sans-serif;
 font-weight: bold;
 margin-top: 30px;
-
+margin-bottom: 30px;
+border-radius: 12px;
 `
 
 const Error = ({children}) => {

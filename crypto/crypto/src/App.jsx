@@ -25,8 +25,11 @@ function App() {
   const Imagen = styled.img`
   max-width: 400px;
   width: 80%;
-  margin: 100px auto 0 auto;
+  margin: 100px auto 0px auto;
   display: block;
+  @media (min-width: 972px){
+    margin: 10px auto 0px auto;
+  }
   `
 
   const Contenedor = styled.div`
@@ -50,6 +53,7 @@ function App() {
         <div>
         <Heading>Apex Crypto</Heading>
         <Formulario/>
+        
         </div>
         </Contenedor>
   )
