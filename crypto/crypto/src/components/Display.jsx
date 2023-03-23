@@ -6,13 +6,16 @@ margin-top: 30px;
   border-radius: 12px;
   background-color: blueviolet;
   width: 100%;
-  height: 270px;
+  height: 100%;
+  max-height: 500px;
   color: white;
   border-style: solid;
   border-color: aliceblue;
   border-width: .2rem;
+  
 
   @media (min-width: 972px){
+    max-height: 220px;
    display: grid;
    grid-template-columns: repeat(2,1fr);
     column-gap:2rem;
@@ -23,20 +26,29 @@ const ContenidoCrypto = styled.span`
 font-family: 'Sono', sans-serif;
 font-weight: bold;
 font-size: 1.5rem;
+vertical-align: center;
 `
 
 const ContenidoCrypto2 = styled.p`
 font-family: 'Sono', sans-serif;
 font-size: 1.5rem;
 margin: 10px auto 0px auto;
-padding-right: 100px;
+text-align: center; 
+
+@media (min-width: 972px){
+    text-align: left;
+    vertical-align: none;
+    display: block;
+}
 `
 const Imagen = styled.img`
 width: 100px;
-margin: 10px 10px 0px 10px;
+margin: 10px auto 0px auto;
 display: block;
+
 @media (min-width: 972px){
   margin: 10px auto 0px auto;
+
 }
 `
 
