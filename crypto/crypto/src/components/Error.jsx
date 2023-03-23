@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const Texto = styled.div`
-background-color: red;
+background-color: #a80303;
 color: aliceblue;
 padding: 15px;
 font-size: 2rem;

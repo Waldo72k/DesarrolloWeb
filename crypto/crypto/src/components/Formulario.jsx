@@ -24,45 +24,7 @@ const InputSubmit = styled.input`
     }
 `
 
-const CuadroCrypto = styled.div`
-margin-top: 30px;
-  border-radius: 12px;
-  background-color: blueviolet;
-  width: 100%;
-  height: 270px;
-  color: white;
-  border-style: solid;
-  border-color: aliceblue;
-  border-width: .2rem;
 
-  @media (min-width: 972px){
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
-    column-gap:2rem;
-  };
-`
-
-const ContenidoCrypto = styled.span`
-font-family: 'Sono', sans-serif;
-font-weight: bold;
-font-size: 1.5rem;
-`
-
-const ContenidoCrypto2 = styled.p`
-font-family: 'Sono', sans-serif;
-font-size: 1.5rem;
-margin: 10px auto 0px auto;
-padding-right: 100px;
-`
-
-const Imagen = styled.img`
-width: 100px;
-margin: 10px 10px 0px 10px;
-display: block;
-@media (min-width: 972px){
-  margin: 10px auto 0px auto;
-}
-`
 
 const Cargando = styled.div`
 border: 5px;
@@ -99,10 +61,11 @@ const Formulario = () => {
 
   const [vinculo, setVinculo] = useState(`USD`);
 
-  
+  const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
     const consultarApi = async () => { //Funcion asyncrona y el => es un return 
+      setCargando(false);
       const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=20&tsym=${vinculo}`; //cambiar lo de la moneda
       const respuesta = await fetch(url); //va a esperar un fetch de url
       const resultado = await respuesta.json();
@@ -125,6 +88,8 @@ const Formulario = () => {
       // ));
       
       setCryptos(arregloCryptos);
+      
+    
     }
     consultarApi();
   }, [])
@@ -156,7 +121,7 @@ const Formulario = () => {
     // console.log(state)
     // console.log(criptoMoneda) ////////Lo tengo que ahcer como stare y criptomoneda, lo del precio´
     // console.log(arregloCryptos)
-    
+    setCargando(true);
     const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=${state}`;
     const respuesta = await fetch(url);
     const resultado = await respuesta.json();
@@ -172,8 +137,9 @@ const Formulario = () => {
     });
     console.log(objetoData);
     setError(false);
-    setValidacion(true); 
-    
+    setValidacion(true);
+    setCargando(false);
+    console.log(cargando)
     
     // console.log(segundaPosicion);
     // console.log(segundaPosicion.nombre);
@@ -194,7 +160,8 @@ const Formulario = () => {
 
         </form>
     </div>
-    {validacion && <Display datos={datosReales}/>}
+    {cargando ? (<Cargando />) : (<div>{validacion && <Display datos={datosReales} props={cargando}/>}</div>)}
+     
     
     </>
   )
