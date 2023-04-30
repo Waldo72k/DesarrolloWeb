@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom'
 const Layout = () => {
   return (
     <main className='flex flex-row h-screen'>
-        <aside className='bg-red-300 w-1/5'>
+        <aside className='bg-green-300 w-1/5'>
             <h1>Indice o contenido</h1>
             <div>
                 <Link to={"/"}>Inicio</Link>

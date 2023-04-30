@@ -122,7 +122,7 @@ const Formulario = () => {
     // console.log(criptoMoneda) ////////Lo tengo que ahcer como stare y criptomoneda, lo del precio´
     // console.log(arregloCryptos)
     setCargando(true);
-    const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=${state}`;
+    const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=20&tsym=${state}`;
     const respuesta = await fetch(url);
     const resultado = await respuesta.json();
     const objetoCypto = resultado.Data.find(
