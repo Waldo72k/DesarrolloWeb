@@ -23,6 +23,13 @@ import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
 const drawerWidth = 240;
 
@@ -40,12 +47,20 @@ const tema = createTheme({
       contrastText: '#000000',
     },
     background: {
-      default: '#fdfdfd'
+      default: '#fbfafa'
     }
   },
 });
 
+function createData(name, area, fruit, status, btn) {
+  return { name, area, fruit, status, btn };
+}
 
+const rows = [
+  createData('Aspersor 1', 'Area Norte', 'Rabano', 'Encendido', 'Boton'),
+  createData('Aspersor 2', 'Area Norte', 'Rabano', 'Encendido', 'Boton'),
+  createData('Aspersor 3', 'Area Norte', 'Rabano', 'Encendido', 'Boton'),
+];
 
 export default function PermanentDrawerLeft() {
   const [open, setOpen] = useState(false);
@@ -176,6 +191,44 @@ export default function PermanentDrawerLeft() {
               label="Amount"
             />
       </FormControl>
+      <Box sx={{ 
+    width: '99%',
+    backgroundColor: 'white',
+    margin: '0 auto',
+    display: 'flex',
+    minHeight: '100vh',}}>
+      <Box sx={{backgroundColor: 'white', width: '100%'}}>
+      <TableContainer component={Paper}>
+      <Table sx={{ Width: '100%' }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Nombre</TableCell>
+            <TableCell align="right">Localizacion</TableCell>
+            <TableCell align="right">Fruto asignado</TableCell>
+            <TableCell align="right">Estatus</TableCell>
+            <TableCell align="right">Acciones</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {row.name}
+              </TableCell>
+              <TableCell align="right">{row.area}</TableCell>
+              <TableCell align="right">{row.fruit}</TableCell>
+              <TableCell align="right">{row.status}</TableCell>
+              <TableCell align="right">{row.btn}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+    </Box>
+  </Box>
       </Box>
     </Box>
     </ThemeProvider>
